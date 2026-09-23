@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Fahim Rahman</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Fahim_Portfolio.styles.css" asp-append-version="true" />
+    <!-- Icons for Demo Header -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <!-- ===== TOP BAR - Demo Image er moto ===== -->
+    <div style="background-color: #0a1e35; color: white; font-size: 13px; padding: 8px 0;">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="d-flex flex-wrap align-items-center gap-3 gap-md-4">
+                <a href="tel:+8801939821774" class="text-decoration-none" style="color: #38bdf8;">
+                    <i class="fas fa-phone-alt me-1"></i> +880 1939-821774
+                </a>
+                <span class="d-none d-md-inline text-white-50">|</span>
+                <span><i class="far fa-envelope me-1"></i> mdfahimrahman7185@gmail.com</span>
+                <span class="d-none d-md-inline text-white-50">|</span>
+                <span><i class="far fa-clock me-1"></i> Saturday - Friday : 24 Hours</span>
+            </div>
+            <div class="d-flex gap-3 mt-2 mt-md-0">
+                <a href="https://www.facebook.com/" target="_blank" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/fahim-rahman-b27a50230/" target="_blank" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/mdfahimrahman2020" target="_blank" class="text-white"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MAIN NAVBAR - Demo Image er moto ===== -->
+    <header class="bg-white shadow-sm sticky-top" style="border-bottom: 1px solid #eee;">
+        <nav class="navbar navbar-expand-sm navbar-light bg-white py-3">
+            <div class="container">
+                <!-- Logo Change: FR. Fahim -->
+                <a class="navbar-brand fw-bold fs-4" asp-area="" asp-page="/Index" style="letter-spacing: 0.5px;">
+                    <span style="color: #0a1e35;">FR.</span><span style="color: #0ea5e9;"> Fahim</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 justify-content-center gap-1 fw-bold" style="font-size: 13px; letter-spacing: 0.5px;">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#about">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#projects">GALLERY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#skills">OUR STORY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                    <!-- Search Box Like Demo -->
+                    <form class="d-flex position-relative mt-3 mt-sm-0" style="width: 250px;">
+                        <input class="form-control form-control-sm ps-3 pe-5" type="search" placeholder="Search for...." aria-label="Search" style="font-size: 13px; border-radius: 8px; height: 38px;">
+                        <button class="btn position-absolute end-0 top-0 h-100 border-0" type="submit" style="color: #0a1e35;">
+                            <i class="fas fa-search" style="font-size: 13px;"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted mt-5">
+        <div class="container py-3 text-center" style="font-size: 13px;">
+            &copy; 2026 - FR. Fahim | Md. Fahim Rahman - ASP.NET Core Developer
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

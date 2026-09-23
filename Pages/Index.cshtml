@@ -1,0 +1,704 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Fahim Rahman";
+    Layout = null;
+}
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="bg-[#0f172a] text-white min-h-screen font-sans">
+
+   
+
+
+    <!-- TOP BAR - Professional Portfolio Style -->
+    <div class="bg-[#0a1e35] text-white text-[13px] py-2.5 px-10 md:px-20">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="tel:+8801939821774" class="flex items-center gap-2">
+                    <i class="fas fa-phone-alt text-xs text-[#38bdf8]"></i>
+                    <span class="text-[#38bdf8] font-bold">+880 1939-821774</span>
+                </a>
+                <span class="hidden md:block w-px h-4 bg-white/20"></span>
+                <a href="mailto:mdfahimrahman7185@gmail.com" class="flex items-center gap-2 hover:text-[#38bdf8] transition">
+                    <i class="far fa-envelope text-xs"></i>
+                    <span>mdfahimrahman7185@gmail.com</span>
+                </a>
+            </div>
+            <div class="flex items-center gap-4 text-sm">
+                <span class="text-gray-400 text-xs hidden md:block">Follow Me:</span>
+                <a href="https://www.facebook.com/fahim.rahmanrahi" target="_blank" class="hover:text-[#38bdf8] transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/fahim-rahman-b27a50230/" target="_blank" class="hover:text-[#38bdf8] transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/mdfahimrahman2020" target="_blank" class="hover:text-[#38bdf8] transition"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- ===== 2. MAIN NAVBAR - White Demo Style ===== -->
+    <nav class="bg-white text-[#0a1e35] flex justify-between items-center px-10 md:px-20 py-4 sticky top-0 z-50 shadow-md">
+        <a href="#home" class="text-xl font-bold tracking-wide">
+            <span class="text-[#0a1e35]">FR.</span><span class="text-[#0ea5e9]"> Fahim</span>
+        </a>
+        <div class="flex gap-6 ml-auto mr-10">
+            <a href="#home" class="hover:text-[#0ea5e9] text-[#0ea5e9]">HOME</a>
+            <a href="#about" class="hover:text-[#0ea5e9]">ABOUT ME</a>
+            <a href="#skills" class="hover:text-[#0ea5e9]">SKILLS</a>
+            <a href="#projects" class="hover:text-[#0ea5e9]">PROJECTS</a>
+            <a href="#gallery" class="hover:text-[#0ea5e9]">GALLERY</a>
+            <a href="#blog" class="hover:text-[#0ea5e9]">BLOG</a>
+            <a href="#contact" class="hover:text-[#0ea5e9]">CONTACT</a>
+        </div>
+        <div class="hidden md:flex items-center relative">
+            <div class="relative flex items-center">
+                <input id="searchInput" type="text" placeholder="Search for..." class="w-40 md:w-56 bg-white border border-gray-200 rounded-lg pl-4 pr-10 py-2 text-sm text-black focus:outline-none focus:border-[#38bdf8]" />
+                <button id="searchBtn" class="absolute right-3 text-gray-500 hover:text-[#0ea5e9]">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Icon -->
+        <button class="md:hidden text-xl"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <!-- ===== 3. HERO SECTION ===== -->
+    <section id="home" class="flex flex-col md:flex-row items-center justify-between px-10 md:px-20 py-20 bg-[#0f172a]">
+        <div class="md:w-1/2">
+            <h1 class="text-5xl font-bold">Hi, I'm <span class="text-[#38bdf8]">Fahim Rahman</span></h1>
+            <h2 class="text-2xl mt-3">Junior Software Engineer</h2>
+            <div class="mt-4 max-w-[600px] text-left">
+                <p class="text-gray-400 text-[15px] leading-[28px]">
+                    Detail-oriented CSE Graduate from AIUB (CGPA 3.52) seeking opportunities as
+                    <span class="text-white font-semibold">Software Engineer | Full Stack | Frontend | Backend Developer.</span>
+                    Proficient in building scalable applications with
+                    <span class="text-white font-semibold">ASP.NET Core, React.js, Bootstrap 5, TypeScript, SQL Server & PostgreSQL.</span>
+                    Developed 3+ full-stack systems and a published researcher on
+                    <span class="text-white font-semibold">Blockchain-based Micropayments System.</span>
+                    Passionate about clean code, REST APIs, and modern UI/UX.
+                </p>
+
+                <div class="flex flex-wrap gap-4 mt-8">
+   
+
+    <!-- CV Download Button - এটাই নতুন -->
+    <a href="/Md_Fahim_Rahman_Junior_Software_Engineer_CV.pdf" download class="border border-white/20 text-white px-7 py-3 rounded-full font-bold text-sm hover:bg-white hover:text-black transition">
+        <i class="fas fa-download mr-2"></i> CV Download
+    </a>
+</div>
+
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center mt-10">
+            <img src="~/images/fahim-home.jpg" alt="Fahim Rahman" class="w-[300px] h-[300px] rounded-full object-cover border-4 border-[#38bdf8]/30 shadow-xl shadow-[#38bdf8]/20" />
+        </div>
+    </section>
+
+    <section id="about" class="px-10 md:px-20 py-20 bg-[#0b1220] max-w-6xl mx-auto rounded-3xl mt-10">
+
+        <!-- About Me Heading - একদম উপরে মাঝখানে -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold">About <span class="text-[#38bdf8]">Me</span></h2>
+            <div class="w-16 h-1 bg-[#38bdf8] mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- নিচে ছবি আর লেখা পাশাপাশি -->
+        <div class="flex flex-col md:flex-row gap-10 items-center">
+            <div class="md:w-1/2">
+                <img src="~/images/fahim-about.jpg" alt="About Fahim" class="w-full max-w-[380px] rounded-2xl border border-gray-700 mx-auto" />
+            </div>
+            <div class="md:w-1/2">
+                <div class="space-y-4 text-gray-400 text-[14px] leading-7 text-justify">
+                    <p>
+                        I am <span class="text-white font-semibold">Md. Fahim Rahman</span>, a BSc in CSE graduate from
+                        American International University-Bangladesh (AIUB) with CGPA 3.52. I am a detail-oriented and
+                        motivated Software Engineer passionate about building scalable, user-friendly web applications.
+                    </p>
+                    <p>
+                        I specialize in full-stack development with
+                        <span class="text-white font-semibold">ASP.NET Core, React.js, Bootstrap 5, TypeScript, SQL Server & PostgreSQL.</span>
+                        I have hands-on experience in developing 3+ systems including Restaurant Management System
+                        (ASP.NET Core, EF Core), Task Management System (React, Node.js, JWT) and Food Court Management (Java, OOP).
+                    </p>
+                    <p>
+                        I am also a <span class="text-white font-semibold">published researcher</span> on
+                        <span class="text-white font-semibold">Blockchain-based Micropayments System</span>, accepted by
+                        I.J. Information Engineering and Electronic Business Journal. Currently seeking opportunities as
+                        <span class="text-white font-semibold">Software Engineer | Full Stack | Frontend | Backend Developer</span>
+                        to contribute clean code and modern UI/UX solutions.
+                    </p>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="px-10 md:px-20 py-20 bg-[#0b1220] mt-10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">My <span class="text-[#38bdf8]">Technical Skills</span></h2>
+                <p class="text-gray-500 text-sm mt-2">Technical expertise & interpersonal strengths</p>
+                <div class="w-16 h-1 bg-[#38bdf8] mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- 1. Programming Languages -->
+                <div class="bg-[#131c31] p-6 rounded-2xl border border-white/5">
+                    <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-[#38bdf8]/10 rounded-lg flex items-center justify-center text-[#38bdf8]"><i class="fas fa-code"></i></div><h3 class="font-bold text-white text-sm">Programming Languages</h3></div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">C++</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">Java (Basic)</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-[#38bdf8] border border-[#38bdf8]/20">JavaScript</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">Python</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">PHP (Basic)</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">Node.js + TypeScript</span>
+                    </div>
+                </div>
+
+                <!-- 2. Frontend Development -->
+                <div class="bg-[#131c31] p-6 rounded-2xl border border-white/5">
+                    <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-400"><i class="fas fa-laptop-code"></i></div><h3 class="font-bold text-white text-sm">Frontend Development</h3></div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-purple-300 border border-purple-500/20">React.js</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">Bootstrap 5</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">HTML</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">UI/UX Design</span>
+                    </div>
+                </div>
+
+                <!-- 3. Backend Development -->
+                <div class="bg-[#131c31] p-6 rounded-2xl border border-white/5">
+                    <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center text-green-400"><i class="fas fa-server"></i></div><h3 class="font-bold text-white text-sm">Backend Development</h3></div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-green-300 border border-green-500/20">ASP.NET Core</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">TypeScript (Backend)</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">Entity Framework</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">Windows Forms</span>
+                    </div>
+                </div>
+
+                <!-- 4. Frameworks & Libraries -->
+                <div class="bg-[#131c31] p-6 rounded-2xl border border-white/5">
+                    <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-orange-500/10 rounded-lg flex items-center justify-center text-orange-400"><i class="fas fa-layer-group"></i></div><h3 class="font-bold text-white text-sm">Frameworks & Libraries</h3></div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-orange-300 border border-orange-500/20">React.js</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">Entity Framework</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">Windows Forms</span>
+                    </div>
+                </div>
+
+                <!-- 5. Database Management -->
+                <div class="bg-[#131c31] p-6 rounded-2xl border border-white/5">
+                    <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-[#38bdf8]/10 rounded-lg flex items-center justify-center text-[#38bdf8]"><i class="fas fa-database"></i></div><h3 class="font-bold text-white text-sm">Database Management</h3></div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-[#38bdf8] border border-[#38bdf8]/20">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">SQL Server</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">SSMS</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">SQL Queries</span>
+                    </div>
+                </div>
+
+                <!-- 6. Tools & Environments -->
+                <div class="bg-[#131c31] p-6 rounded-2xl border border-white/5">
+                    <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-pink-500/10 rounded-lg flex items-center justify-center text-pink-400"><i class="fas fa-tools"></i></div><h3 class="font-bold text-white text-sm">Tools & Environments</h3></div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">Visual Studio</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">VS Code</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">Git</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">Postman</span>
+                    </div>
+                </div>
+
+                <!-- 7. Technical Concepts -->
+                <div class="bg-[#131c31] p-6 rounded-2xl border border-white/5">
+                    <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-yellow-500/10 rounded-lg flex items-center justify-center text-yellow-400"><i class="fas fa-cogs"></i></div><h3 class="font-bold text-white text-sm">Technical Concepts</h3></div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-yellow-300 border border-yellow-500/20">RESTful API</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">JWT Authentication</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">CRUD Operations</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">File I/O</span>
+                    </div>
+                </div>
+
+                <!-- 8. Design & UX -->
+                <div class="bg-[#131c31] p-6 rounded-2xl border border-white/5">
+                    <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-400"><i class="fas fa-palette"></i></div><h3 class="font-bold text-white text-sm">Design & User Experience</h3></div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-cyan-300 border border-cyan-500/20">UI/UX Design</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">Responsive Web Design</span>
+                        <span class="px-3 py-1 bg-[#0f172a] rounded-full text-[11px] text-gray-300 border border-white/10">User Interface Development</span>
+                    </div>
+                </div>
+
+                <!-- 9. Soft Skills - NEW PROFESSIONAL SECTION -->
+                <div class="bg-gradient-to-br from-[#131c31] to-[#1a2744] p-6 rounded-2xl border border-[#38bdf8]/20 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-[#38bdf8] to-purple-500 rounded-lg flex items-center justify-center text-white"><i class="fas fa-users"></i></div>
+                        <h3 class="font-bold text-white text-sm">Soft Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-[#0f172a] rounded-full text-[11px] text-white border border-[#38bdf8]/30 flex items-center gap-1.5"><i class="fas fa-brain text-[10px] text-[#38bdf8]"></i> Problem Solving</span>
+                        <span class="px-3 py-1.5 bg-[#0f172a] rounded-full text-[11px] text-white border border-purple-500/30 flex items-center gap-1.5"><i class="fas fa-comments text-[10px] text-purple-400"></i> Effective Communication & Team Collaboration</span>
+                        <span class="px-3 py-1.5 bg-[#0f172a] rounded-full text-[11px] text-white border border-green-500/30 flex items-center gap-1.5"><i class="fas fa-rocket text-[10px] text-green-400"></i> Quick Learning & Adaptability to New Technologies</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MY PROJECTS - FINAL FULL CODE ==================== -->
+    <section id="projects" class="px-6 md:px-20 py-20 bg-[#0a1222]">
+
+        <div class="max-w-7xl mx-auto">
+            <!-- Heading -->
+            <div class="text-center mb-14">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">My <span class="text-[#38bdf8]">Projects</span></h2>
+                <p class="text-gray-500 text-sm mt-3 tracking-wide">Some of my academic & personal works from GitHub</p>
+                <div class="w-16 h-1 bg-[#38bdf8] mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1: Restaurant Management System -->
+                <div class="group bg-[#131c31] rounded-2xl border border-white/5 overflow-hidden hover:-translate-y-2 hover:border-[#38bdf8]/50 hover:shadow-2xl hover:shadow-[#38bdf8]/10 transition-all duration-300 ease-in-out">
+                    <div class="h-1.5 w-full bg-[#38bdf8] group-hover:h-2 transition-all duration-300"></div>
+                    <div class="p-7 flex flex-col h-[calc(100%-6px)]">
+                        <h3 class="text-white font-bold text-lg mb-3 group-hover:text-[#38bdf8] transition"> Cravix Restaurant Management System</h3>
+                        <p class="text-gray-400 text-[13px] leading-6 mb-6 flex-grow">Complete web-based system with menu, order, billing and customer management. Built with ASP.NET MVC & SQL Server.</p>
+                        <div class="flex gap-2 mb-6">
+                            <span class="text-[10px] px-2.5 py-1 rounded-full bg-[#38bdf8]/10 text-[#38bdf8] border border-[#38bdf8]/20">C#</span>
+                            <span class="text-[10px] px-2.5 py-1 rounded-full bg-white/5 text-gray-300 border border-white/10">MVC</span>
+                            <span class="text-[10px] px-2.5 py-1 rounded-full bg-white/5 text-gray-300 border border-white/10">SQL</span>
+                        </div>
+                        <a href="https://github.com/mdfahimrahman2020/Cravix-Restaurant-System" target="_blank" class="block w-full bg-[#38bdf8] hover:bg-white text-black font-bold text-sm py-3 rounded-xl text-center transition-all duration-300">
+                            <i class="fab fa-github mr-2"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Task Management System -->
+                <div class="group bg-[#131c31] rounded-2xl border border-white/5 overflow-hidden hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 ease-in-out">
+                    <div class="h-1.5 w-full bg-purple-500 group-hover:h-2 transition-all duration-300"></div>
+                    <div class="p-7 flex flex-col h-[calc(100%-6px)]">
+                        <h3 class="text-white font-bold text-lg mb-3 group-hover:text-purple-400 transition">Task Management System</h3>
+                        <p class="text-gray-400 text-[13px] leading-6 mb-6 flex-grow">Full-stack task management app with authentication, role-based access and JWT. Users can create, track and manage tasks.</p>
+                        <div class="flex gap-2 mb-6">
+                            <span class="text-[10px] px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">JWT</span>
+                            <span class="text-[10px] px-2.5 py-1 rounded-full bg-white/5 text-gray-300 border border-white/10">.NET</span>
+                            <span class="text-[10px] px-2.5 py-1 rounded-full bg-white/5 text-gray-300 border border-white/10">API</span>
+                        </div>
+                        <a href="https://github.com/mdfahimrahman2020/Task-Management-System" target="_blank" class="block w-full bg-[#38bdf8] hover:bg-purple-500 group-hover:text-white text-black font-bold text-sm py-3 rounded-xl text-center transition-all duration-300">
+                            <i class="fab fa-github mr-2"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Food Court Management -->
+                <div class="group bg-[#131c31] rounded-2xl border border-white/5 overflow-hidden hover:-translate-y-2 hover:border-orange-500/50 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-300 ease-in-out">
+                    <div class="h-1.5 w-full bg-orange-500 group-hover:h-2 transition-all duration-300"></div>
+                    <div class="p-7 flex flex-col h-[calc(100%-6px)]">
+                        <h3 class="text-white font-bold text-lg mb-3 group-hover:text-orange-400 transition">Food Court Management</h3>
+                        <p class="text-gray-400 text-[13px] leading-6 mb-6 flex-grow">Developed using Java with OOP principles. It manages food stalls, orders, inventory and billing system for food courts.</p>
+                        <div class="flex gap-2 mb-6">
+                            <span class="text-[10px] px-2.5 py-1 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20">Java</span>
+                            <span class="text-[10px] px-2.5 py-1 rounded-full bg-white/5 text-gray-300 border border-white/10">OOP</span>
+                            <span class="text-[10px] px-2.5 py-1 rounded-full bg-white/5 text-gray-300 border border-white/10">Swing</span>
+                        </div>
+                        <a href="https://github.com/mdfahimrahman2020/Food-Court-Official-Management-System" target="_blank" class="block w-full bg-[#38bdf8] hover:bg-orange-500 group-hover:text-white text-black font-bold text-sm py-3 rounded-xl text-center transition-all duration-300">
+                            <i class="fab fa-github mr-2"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- View All Repositories Button - Grid er Baire, Ekdom Majhkhane -->
+            <div class="w-full flex flex-col items-center justify-center mt-14">
+                <a href="https://github.com/mdfahimrahman2020?tab=repositories" target="_blank"
+                   class="group inline-flex items-center gap-3 bg-white/[0.06] hover:bg-[#38bdf8] border border-white/10 hover:border-[#38bdf8] text-white px-8 py-3.5 rounded-full font-bold text-sm transition-all duration-300">
+                    <i class="fab fa-github text-lg"></i>
+                    View All Repositories
+                    <i class="fas fa-arrow-right text-xs group-hover:translate-x-1.5 transition-transform duration-300"></i>
+                </a>
+                <p class="text-gray-500 text-xs mt-3">Explore 20+ more projects on my GitHub</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- ==================== END PROJECTS SECTION ==================== -->
+    <!-- GALLERY SECTION - Professional Style -->
+    <section id="gallery" class="px-10 md:px-20 py-20 bg-[#0f172a]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-white">My <span class="text-[#38bdf8]">Gallery</span></h2>
+                <p class="text-gray-500 text-sm mt-2">Some moments from my work, events & life</p>
+                <div class="w-16 h-1 bg-[#38bdf8] mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Image 1 -->
+                <div onclick="openGallery(this)" class="group relative overflow-hidden rounded-xl h-64 bg-[#131c31] border border-white/5 cursor-pointer">
+                    <!-- Image 1 - g1.jpg -->
+                    <img src="/images/g1.jpg" data-full="/images/g1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center gap-2">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                        <p class="text-white text-sm font-bold">Presentation Time</p>
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div onclick="openGallery(this)" class="group relative overflow-hidden rounded-xl h-64 bg-[#131c31] border border-white/5 cursor-pointer">
+                    <img src="/images/g6.jpg" data-full="/images/g3.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center gap-2">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                        <p class="text-white text-sm font-bold">Team Work</p>
+                    </div>
+                </div>
+                <!-- Image 3 -->
+                <div onclick="openGallery(this)" class="group relative overflow-hidden rounded-xl h-64 bg-[#131c31] border border-white/5 cursor-pointer">
+                    <img src="/images/g3.jpg" data-full="/images/g3.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center gap-2">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                        <p class="text-white text-sm font-bold">AIUB Campus</p>
+                    </div>
+                </div>
+                <!-- Image 4 -->
+                <div onclick="openGallery(this)" class="group relative overflow-hidden rounded-xl h-64 bg-[#131c31] border border-white/5 cursor-pointer">
+                    <img src="/images/g2.jpg" data-full="/images/g4.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center gap-2">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                        <p class="text-white text-sm font-bold">Project Presentation</p>
+                    </div>
+                </div>
+                <!-- Image 5 -->
+                <div onclick="openGallery(this)" class="group relative overflow-hidden rounded-xl h-64 bg-[#131c31] border border-white/5 cursor-pointer">
+                    <!-- Image 5 - g4.jpg / g5.jpg -->
+                    <img src="/images/g4.jpg" data-full="/images/g4.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center gap-2">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                        <p class="text-white text-sm font-bold">Office</p>
+                    </div>
+                </div>
+                <!-- Image 6 -->
+                <div onclick="openGallery(this)" class="group relative overflow-hidden rounded-xl h-64 bg-[#131c31] border border-white/5 cursor-pointer">
+                    <img src="/images/g5.jpg" data-full="/images/g4.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center gap-2">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                        <p class="text-white text-sm font-bold">Certificates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal - তোমার Section এর বাইরে বসাবে, Body এর শেষে -->
+    <div id="galleryModal" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-[9999] hidden flex items-center justify-center p-4">
+        <button onclick="closeGallery()" class="absolute top-6 right-6 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full text-white flex items-center justify-center transition">
+            <i class="fas fa-times text-xl"></i>
+        </button>
+        <!-- Prev Button -->
+        <button onclick="prevImage()" class="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 w-11 h-11 bg-white/10 hover:bg-[#38bdf8] rounded-full text-white flex items-center justify-center transition">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <!-- Next Button -->
+        <button onclick="nextImage()" class="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 w-11 h-11 bg-white/10 hover:bg-[#38bdf8] rounded-full text-white flex items-center justify-center transition">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <img id="modalImage" src="" class="max-w-full max-h-[85vh] rounded-xl shadow-2xl object-contain" />
+        <p id="modalCaption" class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/10 px-4 py-2 rounded-full text-white text-sm backdrop-blur"></p>
+    </div>
+
+    <script>
+            let galleryImages = [];
+            let currentIndex = 0;
+
+            function openGallery(el) {
+                const allImgs = document.querySelectorAll('#gallery [data-full]');
+                galleryImages = Array.from(allImgs).map(img => ({
+                    src: img.getAttribute('data-full') || img.src,
+                    caption: img.parentElement.querySelector('p')?.innerText || ''
+                }));
+                const clickedSrc = el.querySelector('img').getAttribute('data-full') || el.querySelector('img').src;
+                currentIndex = galleryImages.findIndex(i => i.src === clickedSrc);
+
+                showImage();
+                document.getElementById('galleryModal').classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function showImage() {
+                document.getElementById('modalImage').src = galleryImages[currentIndex].src;
+                document.getElementById('modalCaption').innerText = galleryImages[currentIndex].caption;
+            }
+
+            function closeGallery() {
+                document.getElementById('galleryModal').classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % galleryImages.length;
+                showImage();
+            }
+            function prevImage() {
+                currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+                showImage();
+            }
+
+            // বাইরে Click করলে Close হবে
+            document.getElementById('galleryModal')?.addEventListener('click', (e) => {
+                if (e.target.id === 'galleryModal') closeGallery();
+            });
+            // ESC, Arrow Key কাজ করবে
+            document.addEventListener('keydown', (e) => {
+                if (document.getElementById('galleryModal').classList.contains('hidden')) return;
+                if (e.key === 'Escape') closeGallery();
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') prevImage();
+            });
+    </script>
+
+
+
+    <section id="blog" class="px-10 md:px-20 py-20 bg-[#0b1220] mt-10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">My <span class="text-[#38bdf8]">Blog</span></h2>
+                <p class="text-gray-500 text-sm mt-2">Sharing my learning journey & tech articles</p>
+                <div class="w-16 h-1 bg-[#38bdf8] mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Blog 1 -->
+                <div class="bg-[#131c31] rounded-2xl overflow-hidden border border-white/5 hover:border-[#38bdf8]/30 hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-br from-[#38bdf8]/20 to-blue-600/20 flex items-center justify-center"><i class="fas fa-code text-3xl text-[#38bdf8]"></i></div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-[11px] text-gray-500 mb-3"><span>Sep 15, 2026</span><span class="w-1 h-1 bg-gray-600 rounded-full"></span><span class="text-[#38bdf8]">ASP.NET Core</span></div>
+                        <h3 class="font-bold text-white text-[15px] leading-6 mb-3">How I Built Scalable REST APIs with ASP.NET Core & JWT</h3>
+                        <p class="text-gray-400 text-[13px] leading-6 mb-4">Secure RESTful APIs with JWT, EF Core and SQL Server. Best practices for clean architecture...</p>
+                        <button onclick="openBlog(1)" class="text-[#38bdf8] text-xs font-bold hover:underline">Read More <i class="fas fa-arrow-right ml-1"></i></button>
+                    </div>
+                </div>
+                <!-- Blog 2 -->
+                <div class="bg-[#131c31] rounded-2xl overflow-hidden border border-white/5 hover:border-purple-500/30 hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-br from-purple-500/20 to-pink-600/20 flex items-center justify-center"><i class="fab fa-react text-3xl text-purple-400"></i></div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-[11px] text-gray-500 mb-3"><span>Aug 28, 2026</span><span class="w-1 h-1 bg-gray-600 rounded-full"></span><span class="text-purple-400">React.js</span></div>
+                        <h3 class="font-bold text-white text-[15px] leading-6 mb-3">Building Modern UI with React.js, Bootstrap 5 & TypeScript</h3>
+                        <p class="text-gray-400 text-[13px] leading-6 mb-4">How I combined React.js with Bootstrap 5 to create responsive, user-friendly interfaces...</p>
+                        <button onclick="openBlog(2)" class="text-purple-400 text-xs font-bold hover:underline">Read More <i class="fas fa-arrow-right ml-1"></i></button>
+                    </div>
+                </div>
+                <!-- Blog 3 -->
+                <div class="bg-[#131c31] rounded-2xl overflow-hidden border border-white/5 hover:border-green-500/30 hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-br from-green-500/20 to-emerald-600/20 flex items-center justify-center"><i class="fas fa-link text-3xl text-green-400"></i></div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-[11px] text-gray-500 mb-3"><span>Jul 10, 2026</span><span class="w-1 h-1 bg-gray-600 rounded-full"></span><span class="text-green-400">Research</span></div>
+                        <h3 class="font-bold text-white text-[15px] leading-6 mb-3">My Published Research: Blockchain-based Micropayments System</h3>
+                        <p class="text-gray-400 text-[13px] leading-6 mb-4">My research paper accepted by I.J. Journal. How blockchain can solve transaction cost problems...</p>
+                        <button onclick="openBlog(3)" class="text-green-400 text-xs font-bold hover:underline">Read More <i class="fas fa-arrow-right ml-1"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BLOG MODALS ===== -->
+    <div id="blogModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4">
+        <div class="bg-[#131c31] max-w-2xl w-full rounded-2xl border border-white/10 max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-[#131c31] p-6 border-b border-white/10 flex justify-between items-start">
+                <h2 id="modalTitle" class="text-xl font-bold text-white pr-4"></h2>
+                <button onclick="closeBlog()" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="p-6">
+                <div id="modalMeta" class="text-xs text-gray-500 mb-4"></div>
+                <div id="modalContent" class="text-gray-300 text-[14px] leading-7 space-y-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+            const blogs = {
+                1: {
+                    title: "How I Built Scalable REST APIs with ASP.NET Core & JWT",
+                    meta: 'Sep 15, 2026 • ASP.NET Core • 5 min read',
+                    content: `
+                    <p>As a CSE graduate from AIUB, I wanted to build a real-world backend that is secure and scalable. In my <b class="text-white">Task Management System</b>, I used ASP.NET Core Web API as the core technology.</p>
+                    <p><b class="text-[#38bdf8]">What I implemented:</b></p>
+                    <ul class="list-disc ml-5 space-y-2 text-gray-400">
+                        <li><b class="text-white">JWT Authentication:</b> User login/signup with secure token-based authentication. Used refresh tokens for better security.</li>
+                        <li><b class="text-white">Entity Framework Core:</b> Code-first approach with SQL Server and PostgreSQL support for data management.</li>
+                        <li><b class="text-white">Clean Architecture:</b> Separated Controller, Service, Repository layer for maintainable code.</li>
+                        <li><b class="text-white">RESTful Principles:</b> Proper HTTP methods (GET, POST, PUT, DELETE), status codes and CRUD operations.</li>
+                    </ul>
+                    <p>This project helped me understand how production-level APIs work. My goal is to apply these skills as a <b class="text-white">Backend / Full Stack Developer</b> in a professional team.</p>
+                    `
+                },
+                2: {
+                    title: "Building Modern UI with React.js, Bootstrap 5 & TypeScript",
+                    meta: 'Aug 28, 2026 • React.js • 4 min read',
+                    content: `
+                    <p>Frontend is the first impression of any application. For my <b class="text-white">Restaurant Management System</b>, I focused on building a user-friendly, fully responsive interface.</p>
+                    <p><b class="text-purple-400">My Frontend Stack:</b></p>
+                    <ul class="list-disc ml-5 space-y-2 text-gray-400">
+                        <li><b class="text-white">React.js:</b> Component-based architecture, hooks, state management for dynamic UI.</li>
+                        <li><b class="text-white">Bootstrap 5 + TypeScript:</b> Used for responsive design and type safety. No CSS framework confusion.</li>
+                        <li><b class="text-white">UI/UX Focus:</b> Clean layout, intuitive navigation, mobile-first design.</li>
+                        <li><b class="text-white">API Integration:</b> Connected React frontend with ASP.NET Core backend using REST APIs.</li>
+                    </ul>
+                    <p>I believe good UI is not just about colors, it's about solving user problems quickly. This is why I am passionate about <b class="text-white">Frontend Development</b> roles as well.</p>
+                    `
+                },
+                3: {
+                    title: "My Published Research: Blockchain-based Micropayments System",
+                    meta: 'Jul 10, 2026 • Research • 6 min read',
+                    content: `
+                    <p>I am proud to be a <b class="text-white">published researcher</b>. My paper on <b class="text-white">Blockchain-based Micropayments System</b> was accepted by <b class="text-[#38bdf8]">I.J. Information Engineering and Electronic Business Journal</b>.</p>
+                    <p><b class="text-green-400">Problem Statement:</b> Traditional payment gateways charge high fees for small payments, making micropayments (like 1-2 taka) not feasible.</p>
+                    <p><b class="text-green-400">My Solution:</b></p>
+                    <ul class="list-disc ml-5 space-y-2 text-gray-400">
+                        <li>Used Blockchain technology to eliminate middlemen.</li>
+                        <li>Designed a low-cost, secure, decentralized payment channel.</li>
+                        <li>Focused on transaction speed and minimal gas fees.</li>
+                    </ul>
+                    <p>This research differentiates me from other fresh graduates. It shows my ability to think beyond coding and solve real-world problems with emerging technologies. You can verify my research in my CV and portfolio.</p>
+                    `
+                }
+            };
+
+            function openBlog(id){
+                document.getElementById('modalTitle').innerText = blogs[id].title;
+                document.getElementById('modalMeta').innerText = blogs[id].meta;
+                document.getElementById('modalContent').innerHTML = blogs[id].content;
+                document.getElementById('blogModal').classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeBlog(){
+                document.getElementById('blogModal').classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+            // Click outside to close
+            document.getElementById('blogModal').addEventListener('click', function(e){
+                if(e.target === this) closeBlog();
+            });
+    </script>
+
+
+
+    <!-- CONTACT - All in One Professional -->
+   <!-- CONTACT - All in One Professional -->
+<!-- CONTACT - Final Corrected -->
+<section id="contact" class="px-10 md:px-20 py-20 bg-[#0f172a]">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white">Contact <span class="text-[#38bdf8]">Me</span></h2>
+            <p class="text-gray-500 text-sm mt-2">Feel free to reach me on any platform</p>
+            <div class="w-16 h-1 bg-[#38bdf8] mx-auto mt-4 rounded"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 items-stretch">
+            <div class="bg-[#131c31] p-8 rounded-2xl border border-white/5 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6">Get In Touch</h3>
+                    <div class="space-y-5">
+                        <!-- Phone - 01939821774 -->
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-[#38bdf8]/10 flex items-center justify-center text-[#38bdf8]"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <p class="text-[11px] text-gray-500 uppercase">Phone</p>
+                                <a href="tel:+8801939821774" class="text-white font-semibold hover:text-[#38bdf8]">01939821774</a>
+                            </div>
+                        </div>
+                        <!-- WhatsApp - 01580972007 -->
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-400"><i class="fab fa-whatsapp text-lg"></i></div>
+                            <div>
+                                <p class="text-[11px] text-gray-500 uppercase">WhatsApp</p>
+                                <a href="https://wa.me/8801580972007" target="_blank" class="text-white font-semibold hover:text-green-400">Chat on Whatsapp</a>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center text-red-400"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <p class="text-[11px] text-gray-500 uppercase">Email</p>
+                                <a href="mailto:mdfahimrahman7185@gmail.com" class="text-white font-semibold hover:text-[#38bdf8] break-all">mdfahimrahman7185@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10">
+                        <p class="text-[11px] text-gray-500 uppercase mb-4 tracking-widest">Connect With Me</p>
+                        <div class="flex gap-3">
+                            <a href="https://www.facebook.com/fahim.rahmanrahi" target="_blank" class="w-11 h-11 rounded-full bg-[#1877F2] flex items-center justify-center text-white hover:scale-110 transition"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/in/fahim-rahman-b27a50230/" target="_blank" class="w-11 h-11 rounded-full bg-[#0A66C2] flex items-center justify-center text-white hover:scale-110 transition"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/mdfahimrahman2020" target="_blank" class="w-11 h-11 rounded-full bg-[#333] flex items-center justify-center text-white hover:scale-110 transition"><i class="fab fa-github"></i></a>
+                            <a href="mailto:mdfahimrahman7185@gmail.com" class="w-11 h-11 rounded-full bg-[#EA4335] flex items-center justify-center text-white hover:scale-110 transition"><i class="fab fa-google"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-4 rounded-xl bg-[#0a1e35] border border-white/5">
+                    <p class="text-xs text-gray-400"><i class="fas fa-map-marker-alt text-[#38bdf8] mr-2"></i> Kuratoli, Khilkhet, Dhaka-1229, Bangladesh</p>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="rounded-2xl overflow-hidden border border-white/5 min-h-[480px] relative">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.098!2d90.4070!3d23.8761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c2a0e3a1c5ab%3A0x7e2a1f3b8d4a2c5d!2sKuratoli%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1700000000000"
+                        style="border:0; position:absolute; top:0; left:0; width:100%; height:100%;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <a href="https://maps.google.com/?q=Kuratoli,Khilkhet,Dhaka-1229" target="_blank" class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-[#0a1e35] text-white text-xs px-5 py-2.5 rounded-full border border-white/10 hover:bg-[#38bdf8] transition">
+                    <i class="fas fa-external-link-alt mr-2"></i> Open in Google Maps
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <script>
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+
+            function doSearch() {
+                let query = searchInput.value.toLowerCase().trim();
+                if (!query) return;
+
+                // কোন শব্দ লিখলে কোথায় যাবে
+                if (query.includes('skill')) {
+                    document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+                } else if (query.includes('project')) {
+                    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                } else if (query.includes('galler')) {
+                    document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+                } else if (query.includes('blog')) {
+                    document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
+                } else if (query.includes('about')) {
+                    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                } else if (query.includes('contact') || query.includes('email') || query.includes('phone')) {
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                } else if (query.includes('home') || query.includes('fahim')) {
+                    document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert('"' + query + '" - Nothing was found। Try: skills, projects, gallery, blog, about, contact');
+                }
+            }
+
+            // Button Click করলে Search
+            searchBtn.addEventListener('click', doSearch);
+
+            // Enter চাপলেও Search হবে
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    doSearch();
+                }
+            });
+    </script>
+</div>
